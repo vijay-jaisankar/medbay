@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Doctor Signup</title>
+{% endblock head %}
+
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-1-12 col-md-5">
+                <h1>Doctor Signup</h1>
+                <form action="" method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input type="submit" value="Sign Up">
+                </form>                
+            </div>
+        </div>
+    </div>
+{% endblock content %}
