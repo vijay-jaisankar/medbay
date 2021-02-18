@@ -4,7 +4,7 @@ from django.forms.models import ModelForm
 from .forms import UserCreationForm,DoctorSignUpForm
 from django.contrib.auth.admin import UserAdmin
 # from django.contrib.auth.models import User
-from .models import User
+from .models import User,Doctor
 
 class CustomUserAdmin(UserAdmin):
     # The forms to add and change user instances
@@ -24,3 +24,4 @@ class CustomUserAdmin(UserAdmin):
 
 
 admin.site.register(User, CustomUserAdmin)
+admin.site.register(Doctor)

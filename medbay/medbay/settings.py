@@ -40,6 +40,9 @@ INSTALLED_APPS = [
 
     # local 
     'users',
+
+    # external
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -129,3 +132,6 @@ AUTH_USER_MODEL = 'users.User'
 
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
+
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

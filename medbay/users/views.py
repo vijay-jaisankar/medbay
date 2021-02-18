@@ -8,8 +8,8 @@ from .forms import DoctorSignUpForm
 
 
 # Create your views here.
-def homeView(request):
-    return render(request,"home.html",{})
+# def homeView(request):
+#     return render(request,"home.html",{})
 
 
 
