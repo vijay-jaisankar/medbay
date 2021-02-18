@@ -7,6 +7,7 @@ from .models import Doctor,Patient,User
 
 class DoctorSignUpForm(UserCreationForm):
     registrationNumber = forms.IntegerField(required=True)
+    department = forms.CharField(max_length=100)
 
     class Meta(UserCreationForm):
         model = User
@@ -19,5 +20,6 @@ class DoctorSignUpForm(UserCreationForm):
         userBase.save()
         doctor = Doctor.objects.create(user=userBase)
         doctor.registrationNumber = self.cleaned_data['registrationNumber']
+        doctor.department = self.cleaned_data['department']
         doctor.save()
         return userBase
