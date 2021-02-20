@@ -17,10 +17,13 @@ from django.contrib import admin
 from django.urls import path,include
 
 from .views import homeView
+from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/',include('users.urls')),
     path('',homeView,name='home'),
+    path('predict/',views.predict,name='predict'),
+    path('predict/result', views.result,name='prediction results'),
     # path()
 ]
